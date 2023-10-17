@@ -1,0 +1,75 @@
+@import "./../variables";
+
+.section_outer_wrapper {
+  background-color: $color-bg;
+  border-radius: 1rem;
+  padding: 1rem;
+
+  hr {
+    border: 0.5px solid $cool-gray;
+    opacity: 0.25;
+  }
+
+  .wrapper_sub {
+    p {
+      font: {
+        size: 1rem;
+        weight: 700;
+      }
+      margin-top: 0.5rem;
+    }
+
+    .sub_inner_wrapper {
+      h2 {
+        font-size: 1rem;
+      }
+
+      button {
+        background: none;
+        text-decoration: underline;
+        font: {
+          size: 1rem;
+          weight: 400;
+        }
+        color: $cool-gray;
+        margin-bottom: 1rem;
+        transition: color 300ms;
+
+        &:hover,
+        :focus {
+          color: $highlight-purple;
+        }
+      }
+    }
+  }
+
+  .wrapper_section_addon {
+    padding-top: 1rem;
+    color: $cool-gray;
+    font-size: 1rem;
+
+    p:nth-child(2) {
+      color: $title-text;
+    }
+  }
+}
+
+.wrapper_sub,
+.wrapper_section_addon,
+.wrapper_grandtotal {
+  display: flex;
+  place-content: space-between;
+}
+
+.wrapper_grandtotal {
+  padding: 1rem;
+
+  p {
+    color: $cool-gray;
+  }
+
+  p:nth-child(2) {
+    color: $highlight-purple;
+    font-weight: 700;
+  }
+}

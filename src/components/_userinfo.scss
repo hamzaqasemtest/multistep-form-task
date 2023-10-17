@@ -1,0 +1,68 @@
+@import "../variables";
+
+.title {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+
+  p {
+    color: $cool-gray;
+  }
+}
+
+.userForm {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+  max-width: 450px;
+  width: 100%;
+
+  .labelError {
+    flex-direction: row;
+
+    .errorText {
+      margin-left: auto;
+      font-size: 0.875rem;
+      color: $error;
+      font-weight: 400;
+    }
+  }
+
+  div {
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
+
+    label {
+      font-size: 0.875rem;
+    }
+
+    input {
+      padding: 0.75rem;
+      color: $title-text;
+      font-weight: 400;
+      outline: none;
+      border: 1px solid $border-color {
+        radius: 0.25rem;
+      }
+      width: 100%;
+
+      &::placeholder {
+        font: {
+          size: 1rem;
+          weight: 400;
+        }
+        color: $cool-gray;
+      }
+
+      &:active,
+      &:focus {
+        border: 1px solid $highlight-purple;
+      }
+
+      &:invalid {
+        border: 1px solid $error;
+      }
+    }
+  }
+}

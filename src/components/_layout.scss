@@ -1,0 +1,170 @@
+@import "./../variables";
+
+.wrapper {
+  display: flex;
+  place-content: center;
+  max-width: 940px;
+  height: 600px;
+  background-color: $color-white;
+  padding: 1rem;
+  border-radius: 1rem;
+  width: 95%;
+  justify-content: start;
+}
+
+.sidebar {
+  display: flex;
+  flex-direction: column;
+  background: no-repeat 100% / cover url("/images/bg-sidebar-desktop.svg");
+  gap: 2.5rem;
+  max-height: 570px;
+  border-radius: 1rem;
+  padding-block-start: 2rem;
+  font-size: 0.875rem;
+  height: 100%;
+
+  .formStep {
+    display: flex;
+    place-items: center;
+    padding-inline: 2.5rem 5rem;
+    gap: 1rem;
+
+    > p {
+      border: 1px solid $color-white {
+        radius: 50%;
+      }
+      width: 2rem;
+      height: 2rem;
+      text-align: center;
+      line-height: 2rem;
+      color: $color-white;
+      background-color: transparent;
+      font-weight: 700;
+      transition: background-color 300ms, color 300ms;
+
+      &.active {
+        border: 1px solid $highlight-blue;
+        background-color: $highlight-blue;
+        color: $title-text;
+      }
+    }
+
+    div {
+      display: flex;
+      flex-direction: column;
+      text-transform: uppercase;
+      gap: 0.25rem;
+      width: max-content;
+
+      p:nth-child(1) {
+        color: $pastel-blue;
+        font-size: 0.75rem;
+      }
+
+      p:nth-child(2) {
+        color: $color-white;
+        font-weight: 700;
+        letter-spacing: 1.25px;
+      }
+    }
+  }
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  padding-block-start: 1.25rem;
+  gap: 1rem;
+  max-width: 450px;
+  width: 100%;
+  margin: 0 auto;
+
+  .title {
+    margin: {
+      top: 0.75rem;
+      bottom: 0.5rem;
+    }
+
+    p {
+      color: $cool-gray;
+      font-size: 1rem;
+    }
+  }
+}
+
+.buttonGroup {
+  margin: {
+    top: auto;
+    bottom: 1rem;
+  }
+  display: grid;
+  grid-template-areas: "button1 button2";
+  place: {
+    items: center;
+    content: space-between;
+  }
+
+  .primaryButton {
+    color: $color-white;
+    background-color: $title-text;
+    border-radius: 0.5rem;
+    padding: 1rem;
+    transition: 350ms linear background-color;
+    align-self: end;
+    grid-area: button2;
+
+    &:hover {
+      background-color: $highlight-purple;
+    }
+  }
+
+  .altButton {
+    color: $cool-gray;
+    background-color: transparent;
+    padding: none;
+    transition: 300ms linear color;
+    grid-area: button1;
+    align-self: center;
+
+    &:hover {
+      color: $title-text;
+    }
+  }
+}
+
+@media (max-width: $responsive) {
+  .wrapper {
+    flex-direction: column;
+    padding: unset;
+    border-radius: unset;
+    width: 100%;
+    background-color: transparent;
+  }
+
+  .sidebar {
+    flex-direction: row;
+    place-content: center;
+    background: no-repeat 100% / cover url("/images/bg-sidebar-mobile.svg");
+    border-radius: unset;
+    background-position-y: 0px;
+    min-height: 200px;
+    gap: 1rem;
+
+    .formStep {
+      padding-inline: unset;
+      height: max-content;
+
+      div {
+        display: none;
+      }
+    }
+  }
+
+  main {
+    background-color: $color-white;
+    padding: 2rem;
+    transform: translateY(-80px);
+    border-radius: 1rem;
+    width: 90%;
+  }
+}

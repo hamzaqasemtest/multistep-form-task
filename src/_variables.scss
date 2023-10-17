@@ -1,0 +1,39 @@
+$title-text: hsl(213, 96%, 18%);
+$highlight-purple: hsl(243, 100%, 62%);
+$pastel-blue: hsl(228, 100%, 84%);
+$highlight-blue: hsl(206, 94%, 87%);
+$error: hsl(354, 84%, 57%);
+$cool-gray: hsl(231, 11%, 63%);
+$light-text: hsl(229, 24%, 87%);
+$magnolia: hsl(217, 100%, 97%);
+$border-color: hsl(231, 100%, 99%);
+$color-white: hsl(0, 0%, 100%);
+$color-bg: hsl(218, 100%, 97%);
+$border-color: hsl(231, 23%, 87%);
+
+
+$font-size-primary: 18px;
+$font-primary: "Ubuntu";
+$responsive: 800px;
+
+
+@font-face {
+  font-family: "Ubuntu";
+  src: url("/font/Ubuntu-Regular.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Ubuntu";
+  src: url("/font/Ubuntu-Medium.ttf") format("truetype");
+  font-weight: 500;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Ubuntu";
+  src: url("/font/Ubuntu-Bold.ttf") format("truetype");
+  font-weight: 700;
+  font-style: normal;
+}

@@ -1,0 +1,84 @@
+@import "../variables";
+
+.addonCard {
+  border: 1px solid $light-text {
+    radius: 0.5rem;
+  }
+  padding: 1.25rem;
+  font-size: 0.875rem;
+  width: 100%;
+  display: flex;
+  place-items: center;
+  gap: 1rem;
+  cursor: pointer;
+  transition: border 300ms;
+
+  &:hover,
+  :focus {
+    border: 1px solid $highlight-purple;
+  }
+
+  &--isActive {
+    @extend .addonCard;
+    border: 1px solid $highlight-purple;
+    //FIX: replace with hsl color variable
+    background-color: #f8f9ff;
+    transition: all 350ms linear;
+  }
+
+  label {
+    display: flex;
+    width: 100%;
+    flex-direction: row;
+    cursor: pointer;
+    place : {
+      items: center;
+      content: space-between;
+    }
+
+    div {
+      display: flex;
+      flex-direction: column;
+      gap: 0.25rem;
+    }
+
+    h2 {
+      font-size: 1rem;
+    }
+
+    p {
+      font-size: 0.875rem;
+    }
+
+    .highlight_text {
+      color: $highlight-purple;
+    }
+  }
+
+  input[type="checkbox"] {
+    appearance: none;
+    cursor: pointer;
+    width: 1.25rem;
+    height: 1.25rem;
+    border: 1px solid $border-color {
+      radius: 0.25rem;
+    }
+    margin-right: 0.25rem;
+    outline: none;
+
+    &:checked::before {
+      content: "\2713";
+      font-size: 1.25rem;
+      color: $color-white;
+      position: absolute;
+      right: 1px;
+      top: -5px;
+    }
+
+    &:checked {
+      border: 1px solid $highlight-purple;
+      position: relative;
+      background-color: $highlight-purple;
+    }
+  }
+}
